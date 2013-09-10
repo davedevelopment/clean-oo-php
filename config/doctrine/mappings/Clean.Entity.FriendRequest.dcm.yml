@@ -1,0 +1,22 @@
+Clean\Entity\FriendRequest:
+  type: entity
+  table: friend_requests
+  id: 
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  manyToOne:
+    from:
+      targetEntity: Clean\Entity\User
+      joinColumn:
+        name: from_user_id
+        referencedColumnName: id
+    to:
+      targetEntity: Clean\Entity\User
+      joinColumn:
+        name: to_user_id
+        referencedColumnName: id
+      inversedBy: friendRequests
+
+# vim:sw=2:ts=2:sts=2:et:

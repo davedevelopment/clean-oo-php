@@ -1,0 +1,21 @@
+Clean\Entity\User:
+  type: entity
+  table: users
+  repositoryClass: CleanDoctrine\Repository\UserRepository
+  id: 
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 50
+  oneToMany:
+    friendRequests:
+      targetEntity: Clean\Entity\FriendRequest
+      mappedBy: to
+      cascade: ["persist", "merge"]
+
+
+# vim:sw=2:ts=2:sts=2:et:

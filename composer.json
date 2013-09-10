@@ -1,0 +1,16 @@
+{
+    "require": {
+        "doctrine/orm": "~2.4",
+        "dflydev/doctrine-orm-service-provider": "~1.0",
+        "silex/silex": "~1.1",
+        "symfony/yaml": "~2.3"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Clean": "src",
+            "CleanWeb": "src",
+            "CleanDoctrine": "src"
+        }
+    }
+}
